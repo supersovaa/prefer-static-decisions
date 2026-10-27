@@ -61,6 +61,15 @@ When a value is part of the implementation rather than an operational choice, ke
 
 Runtime configuration is most useful for values that operators, deployments, users, or environments are expected to change independently of the code.
 
+Treat environment-variable-backed configuration as one startup boundary:
+
+- Define the complete set of environment-derived settings in one configuration schema, constructor, or equivalent entry point.
+- Read every declared environment-derived setting during startup.
+- Resolve defaults and validate required presence, parsing, allowed values or ranges, and relationships whose inputs are available at startup.
+- Complete this validation before application work, background workers, network listeners, or other dependent components start.
+- Convert the validated values into a configuration representation and pass that representation inward. Application components consume the validated configuration as their source of runtime settings.
+- When validation finds configuration errors, end startup with a configuration error that reports every detected setting or constraint failure from that validation pass. Identify settings and violated constraints directly.
+
 ### Build-time choices
 
 When environments or targets require different implementations and that distinction is known during the build, prefer build-time or compile-time selection where the language and toolchain support it naturally.
@@ -89,6 +98,7 @@ Typical signals include:
 - broad primitive types followed by checks for a small known set of values;
 - feature flags whose value is fixed in every supported execution;
 - configuration entries for values that are implementation constants;
+- environment variables read directly by application components instead of through validated startup configuration;
 - registries containing a single implementation;
 - provider or strategy abstractions with only one real choice;
 - runtime lookups for relationships known when writing the code;
