@@ -98,7 +98,7 @@ Typical signals include:
 - broad primitive types followed by checks for a small known set of values;
 - feature flags whose value is fixed in every supported execution;
 - configuration entries for values that are implementation constants;
-- environment variables read directly by application components instead of through validated startup configuration;
+- environment-backed runtime settings that can be consolidated into one validated startup configuration;
 - registries containing a single implementation;
 - provider or strategy abstractions with only one real choice;
 - runtime lookups for relationships known when writing the code;
