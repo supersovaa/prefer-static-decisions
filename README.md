@@ -1,6 +1,6 @@
 # prefer-static-decisions
 
-A lightweight coding skill for preferring static representations when the relevant facts, constraints, choices, relationships, or structure are already known.
+A lightweight coding skill for preferring static representations when relevant facts, constraints, choices, relationships, or structure are already known, and for resolving genuine runtime configuration at the earliest boundary where its values are available.
 
 ## Principle
 
