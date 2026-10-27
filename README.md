@@ -15,7 +15,7 @@ This skill is useful when code introduces more runtime flexibility than the prob
 - using a broad primitive type for a small closed set of valid values;
 - repeatedly validating constraints that can be encoded once in a type or at a boundary;
 - introducing runtime configuration for implementation constants;
-- loading environment-backed runtime settings outside a single validated startup boundary;
+- consolidating environment-backed runtime settings into a single validated startup boundary;
 - using registries, providers, or strategy selection for a single fixed implementation;
 - performing runtime lookups for relationships already known when the code is written;
 - procedurally constructing data that can be expressed directly as static data;
