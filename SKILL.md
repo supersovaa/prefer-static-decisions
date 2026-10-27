@@ -1,11 +1,11 @@
 ---
 name: prefer-static-decisions
-description: Prefer static representations for facts, constraints, choices, relationships, and structure that are already known at implementation or build time. Match implementation dynamism to the actual variability required by the problem.
+description: Prefer static representations for facts, constraints, choices, relationships, and structure that are already known, and resolve genuine runtime configuration at the earliest boundary where its values are available. Match implementation dynamism to the actual variability required by the problem.
 ---
 
 # Prefer Static Decisions
 
-Prefer static representations for things that are already known.
+Prefer static representations for things that are already known. Resolve genuinely runtime-provided information at the earliest boundary where its required values are available.
 
 ## Core principles
 
