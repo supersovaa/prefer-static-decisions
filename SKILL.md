@@ -1,11 +1,11 @@
 ---
 name: prefer-static-decisions
-description: Prefer static representations for facts, choices, constraints, and relationships known at implementation or build time. Reserve runtime decisions for actual variability.
+description: Use when designing, implementing, refactoring, or reviewing code to choose where facts, constraints, or choices should be represented.
 ---
 
 # Prefer Static Decisions
 
-When choosing a representation, first ask when the relevant fact or choice becomes known.
+For each representation or runtime decision under consideration, ask when its information becomes known. Prefer a static representation for facts fixed at implementation or build time, subject to the readability and runtime boundaries below.
 
 ## Core principles
 
